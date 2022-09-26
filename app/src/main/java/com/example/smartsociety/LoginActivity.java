@@ -1,6 +1,8 @@
 package com.example.smartsociety;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -23,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     public Button login;
     public Button register;
     public FirebaseAuth auth;
+    public SharedPreferences sharedPreferences;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +36,16 @@ public class LoginActivity extends AppCompatActivity {
         username =findViewById(R.id.username);
         password=findViewById(R.id.password);
         auth=FirebaseAuth.getInstance();
+
+        sharedPreferences=getSharedPreferences("Data", Context.MODE_PRIVATE);
+
+        String type =sharedPreferences.getString("Email","");
+        if(type.isEmpty()){
+            Toast.makeText(this, "Please Login", Toast.LENGTH_SHORT).show();
+        }else{
+            Intent intent=new Intent(LoginActivity.this,Dashboard.class);
+            startActivity(intent);
+        }
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +72,11 @@ public class LoginActivity extends AppCompatActivity {
         auth.signInWithEmailAndPassword(eml,pass).addOnSuccessListener(LoginActivity.this, new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
+
+                SharedPreferences.Editor editor=sharedPreferences.edit();
+                editor.putString("Email",eml);
+                editor.putString("Password",pass);
+                editor.commit();
                 Toast.makeText(LoginActivity.this, "Login Successful.", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(LoginActivity.this, Dashboard.class);
                 startActivity(intent);
