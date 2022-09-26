@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "815799017187",
+    "project_id": "smart-society-a02f1",
+    "storage_bucket": "smart-society-a02f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815799017187:android:d99a692e8350a9e373afd6",
+        "android_client_info": {
+          "package_name": "com.example.smartsociety"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "815799017187-r1vuurfvknm4icsnhkcvnugh4r3mfgd9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTaMC37q-dmbXYMft0Swu4FivHu1C28xw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "815799017187-r1vuurfvknm4icsnhkcvnugh4r3mfgd9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

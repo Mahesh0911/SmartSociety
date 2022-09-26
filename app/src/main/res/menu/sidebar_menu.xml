@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/notificationSetting"
+            android:title="Notification Setting"
+            android:padding="5dp"
+            android:icon="@drawable/ic_baseline_edit_notifications_24"
+            />
+        <item android:id="@+id/changePass"
+            android:title="Change Password"
+            android:padding="5dp"
+            android:icon="@drawable/ic_baseline_password_24"
+            />
+        <item android:id="@+id/uiTheme"
+            android:title="Change Theme"
+            android:padding="5dp"
+            android:icon="@drawable/ic_baseline_chrome_reader_mode_24"
+            />
+        <item android:id="@+id/logout"
+            android:title="Log Out"
+            android:padding="5dp"
+            android:icon="@drawable/ic_baseline_logout_24"
+            />
+    </group>
+</menu>

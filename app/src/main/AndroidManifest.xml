@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/outline_home_work_black_24"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/outline_home_work_black_48"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SmartSociety"
+        tools:targetApi="31">
+        <activity
+            android:name=".societyDashboard"
+            android:exported="false"
+            android:parentActivityName=".Dashboard">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".parkingQuery"
+            android:exported="false"
+            android:parentActivityName=".Dashboard">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".emergencyAlerts"
+            android:exported="false"
+            android:parentActivityName=".Dashboard">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".registerPage"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Dashboard"
+            android:exported="true" />
+        <activity
+            android:name=".parkingManagement"
+            android:exported="true"
+            android:parentActivityName=".Dashboard" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
