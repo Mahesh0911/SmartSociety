@@ -32,6 +32,7 @@ public class Dashboard extends AppCompatActivity {
     public Switch switchTheme;
 
 
+
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;

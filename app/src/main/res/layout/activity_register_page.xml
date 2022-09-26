@@ -11,13 +11,13 @@
         android:id="@+id/typeOfMember"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/styles"
         android:paddingStart="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/email1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/_dynamic">
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
             android:id="@+id/owner"
@@ -40,28 +40,7 @@
             android:text="@string/tenant"
             tools:ignore="TouchTargetSizeCheck" />
 
-        <RadioButton
-            android:id="@+id/fam_member_tenant"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="@string/family_member_of_tenant"
-            tools:ignore="TouchTargetSizeCheck" />
     </RadioGroup>
-
-    <ListView
-        android:id="@+id/_dynamic"
-        android:layout_width="300dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/styles"
-        android:minHeight="48dp"
-        android:paddingStart="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/email1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeOfMember"
-        app:layout_constraintVertical_bias="0.341" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -95,13 +74,13 @@
         android:id="@+id/name"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/styles"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:paddingStart="15dp"
-        android:background="@drawable/styles"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -111,13 +90,13 @@
         android:id="@+id/mobileno"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/styles"
         android:ems="10"
         android:hint="@string/mobile_no"
         android:inputType="phone"
         android:minHeight="48dp"
         android:paddingStart="15dp"
-        android:background="@drawable/styles"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -127,7 +106,7 @@
         android:id="@+id/email1"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/styles"
         android:ems="10"
         android:hint="Email ID"
@@ -136,7 +115,9 @@
         app:layout_constraintBottom_toTopOf="@+id/Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_dynamic"
+        app:layout_constraintVertical_bias="0.956" />
 
     <EditText
         android:id="@+id/Password"
@@ -157,7 +138,7 @@
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="4dp"
         android:text="SUBMIT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
