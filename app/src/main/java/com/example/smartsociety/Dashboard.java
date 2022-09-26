@@ -67,7 +67,6 @@ public class Dashboard extends AppCompatActivity {
                         Toast.makeText(Dashboard.this, "Change Password", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.uiTheme:
-//                        Toast.makeText(Dashboard.this, "Theme Changed", Toast.LENGTH_SHORT).show();
                         switchTheme=findViewById(R.id.chTheme);
                         switchTheme.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                             @Override
@@ -77,6 +76,7 @@ public class Dashboard extends AppCompatActivity {
                                 }else{
                                     getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                                 }
+                        Toast.makeText(Dashboard.this, "Theme Changed", Toast.LENGTH_SHORT).show();
                             }
                         });
                         break;
