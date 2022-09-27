@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/vehicleName2"
+        android:id="@+id/vehicleNo"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:gravity="center"
