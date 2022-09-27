@@ -7,41 +7,6 @@
     android:touchscreenBlocksFocus="true">
 
 
-    <RadioGroup
-        android:id="@+id/typeOfMember"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/styles"
-        android:paddingStart="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/email1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <RadioButton
-            android:id="@+id/owner"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="@string/owner"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <RadioButton
-            android:id="@+id/family_member"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="@string/family_member"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <RadioButton
-            android:id="@+id/tenant"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="@string/tenant"
-            tools:ignore="TouchTargetSizeCheck" />
-
-    </RadioGroup>
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="100dp"
@@ -56,25 +21,11 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/user_logo" />
 
-    <ListView
-        android:layout_width="300dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/styles"
-        android:cacheColorHint="#00FFFFFF"
-        android:minHeight="48dp"
-        android:paddingStart="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobileno"
-        tools:ignore="TouchTargetSizeCheck" />
-
     <EditText
         android:id="@+id/name"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/styles"
         android:ems="10"
         android:hint="Name"
@@ -106,7 +57,6 @@
         android:id="@+id/email1"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/styles"
         android:ems="10"
         android:hint="Email ID"
@@ -116,14 +66,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/_dynamic"
-        app:layout_constraintVertical_bias="0.956" />
+        app:layout_constraintTop_toBottomOf="@+id/relationStatus"
+        app:layout_constraintVertical_bias="0.5" />
 
     <EditText
         android:id="@+id/Password"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="24dp"
         android:background="@drawable/styles"
         android:ems="10"
         android:hint="Password"
@@ -132,16 +81,52 @@
         app:layout_constraintBottom_toTopOf="@+id/submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email1"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="80dp"
         android:text="SUBMIT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Password"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/flatNo"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/styles"
+        android:ems="10"
+        android:hint="Flat No"
+        android:inputType="number"
+        android:padding="15dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobileno" />
+
+    <EditText
+        android:id="@+id/relationStatus"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@drawable/styles"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/email1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flatNo"
+        app:layout_constraintVertical_bias="0.141" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

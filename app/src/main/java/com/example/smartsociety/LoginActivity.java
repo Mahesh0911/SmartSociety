@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
             final EditText emailet= new EditText(this);
 
             // write the email using which you registered
-            emailet.setText("Email");
+            emailet.setHint("Enter Email");
             emailet.setMinEms(16);
             emailet.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
             linearLayout.addView(emailet);
