@@ -34,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     public Button forgotpass;
     public FirebaseAuth auth;
     public SharedPreferences sharedPreferences;
+    public static final String extraName="com.example.smartsociety.logintodashboard";
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,6 +96,7 @@ public class LoginActivity extends AppCompatActivity {
                 editor.commit();
                 Toast.makeText(LoginActivity.this, "Login Successful.", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(LoginActivity.this, Dashboard.class);
+                intent.putExtra(extraName,eml);
                 startActivity(intent);
             }
         });

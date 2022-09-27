@@ -29,9 +29,10 @@ public class Dashboard extends AppCompatActivity {
     public Button vehiclebtn;
     public Button alertbtn;
     public Button societybtn;
+    public Button familybtn;
     public Switch switchTheme;
 
-
+    public static final String extraName="com.example.smartsociety.dashboard";
 
 
     DrawerLayout drawerLayout;
@@ -47,9 +48,13 @@ public class Dashboard extends AppCompatActivity {
         vehiclebtn=findViewById(R.id.vehiclebtn);
         alertbtn=findViewById(R.id.alertbtn);
         societybtn=findViewById(R.id.societybtn);
+        familybtn=findViewById(R.id.familybtn);
 
         drawerLayout=findViewById(R.id.drawerLayout);
         navigationView=findViewById(R.id.navigation_view);
+
+        Intent intnt=getIntent();
+        String eml=intnt.getStringExtra(LoginActivity.extraName);
 
         actionBarDrawerToggle=new ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
@@ -97,11 +102,20 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
+familybtn.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent intent=new Intent(Dashboard.this,myFamily.class);
+        intent.putExtra(extraName,eml);
+        startActivity(intent);
+    }
+});
 
         vehiclebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Dashboard.this,parkingManagement.class);
+                intent.putExtra(extraName,eml);
                 startActivity(intent);
             }
         });
