@@ -67,8 +67,12 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
-                    case R.id.notificationSetting:
-                        Toast.makeText(Dashboard.this, "Notification Settings", Toast.LENGTH_SHORT).show();
+                    case R.id.profile:
+                        Toast.makeText(Dashboard.this, "Your Profile", Toast.LENGTH_SHORT).show();
+                        Intent inten=new Intent(Dashboard.this,profileActivity.class);
+                        inten.putExtra(extraName,eml);
+                        startActivity(inten);
+
                         break;
                     case R.id.changePass:
                         Toast.makeText(Dashboard.this, "Change Password", Toast.LENGTH_SHORT).show();
