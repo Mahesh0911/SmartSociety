@@ -79,7 +79,7 @@ public class registerPage extends AppCompatActivity{
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    FirebaseDatabase.getInstance().getReference().child("Gokuldham_Society").child(eml).push().setValue(map);
+                    FirebaseDatabase.getInstance().getReference().child("Gokuldham_Society").push().setValue(map);
                     Toast.makeText(registerPage.this, "success", Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(registerPage.this,LoginActivity.class);
                     startActivity(intent);
