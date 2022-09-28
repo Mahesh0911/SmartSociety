@@ -7,15 +7,14 @@
     tools:context=".profileActivity">
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/nm"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="15dp"
-        android:text="TextView"
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintBottom_toTopOf="@+id/emal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,67 +22,63 @@
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/emal"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="15dp"
-        android:text="TextView"
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintBottom_toTopOf="@+id/mno"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/nm"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/mno"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="15dp"
-        android:text="TextView"
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintBottom_toTopOf="@+id/flatno"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/emal"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/flatno"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="15dp"
-        android:text="TextView"
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintBottom_toTopOf="@+id/status"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/mno"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/status"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="15dp"
-        android:text="TextView"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/flatno"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
@@ -96,7 +91,7 @@
         android:textColor="#000000"
         android:textSize="24sp"
         android:background="@drawable/styles"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintBottom_toTopOf="@+id/nm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

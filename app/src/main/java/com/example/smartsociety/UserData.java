@@ -13,6 +13,7 @@ public class UserData {
 //        map.put("flat_no", flat);
 //        map.put("relation_status",relStatus);
 
+    public UserData(){}
     public UserData(String eml,String nam, String mno, String flat,String relStatus){
         this.name=nam;
         this.mobile_no=mno;
@@ -20,6 +21,8 @@ public class UserData {
         this.flat_no=flat;
         this.relation_status=relStatus;
     }
+
+
     public String getName(){
         return name;
     }

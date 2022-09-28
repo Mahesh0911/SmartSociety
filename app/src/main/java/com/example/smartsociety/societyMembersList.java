@@ -26,7 +26,7 @@ public class societyMembersList extends RecyclerView.Adapter<societyMembersList.
             super(view);
             // Define click listener for the ViewHolder's View
 
-            textView = (TextView) view.findViewById(R.id.vehicleNo);
+            textView = (TextView) view.findViewById(R.id.vehicleName);
         }
 
         public TextView getTextView() {

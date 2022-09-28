@@ -18,6 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -79,7 +80,13 @@ public class registerPage extends AppCompatActivity{
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    Map<String, String> arr = new HashMap<>();
+                    arr.put("name",nam);
+                    arr.put("mobile_no",mno);
                     FirebaseDatabase.getInstance().getReference().child("Gokuldham_Society").push().setValue(map);
+                    FirebaseDatabase.getInstance().getReference().child("Vehicles").push().setValue(arr);
+                    FirebaseDatabase.getInstance().getReference().child("Family").push().setValue(arr);
+
                     Toast.makeText(registerPage.this, "success", Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(registerPage.this,LoginActivity.class);
                     startActivity(intent);

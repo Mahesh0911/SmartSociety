@@ -63,7 +63,7 @@ public class Dashboard extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @SuppressLint("NonConstantResourceId")
+//            @SuppressLint("NonConstantResourceId")
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
@@ -72,7 +72,6 @@ public class Dashboard extends AppCompatActivity {
                         Intent inten=new Intent(Dashboard.this,profileActivity.class);
                         inten.putExtra(extraName,eml);
                         startActivity(inten);
-
                         break;
                     case R.id.changePass:
                         Toast.makeText(Dashboard.this, "Change Password", Toast.LENGTH_SHORT).show();
@@ -118,9 +117,9 @@ familybtn.setOnClickListener(new View.OnClickListener() {
         vehiclebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Dashboard.this,parkingManagement.class);
-                intent.putExtra(extraName,eml);
-                startActivity(intent);
+                Intent inte=new Intent(Dashboard.this,parkingManagement.class);
+//                inte.putExtra(extraName,eml);
+                startActivity(inte);
             }
         });
         alertbtn.setOnClickListener(new View.OnClickListener() {
